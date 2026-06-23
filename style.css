@@ -1,0 +1,692 @@
+/* =======================================
+   THE VAULT
+   STYLE.CSS
+======================================= */
+
+:root {
+
+    --vault-green: #00E08A;
+    --vault-cyan: #00D4FF;
+    --vault-amber: #FFC857;
+    --vault-red: #FF5A5F;
+
+    --bg-main: #0B1220;
+    --bg-secondary: #111827;
+
+    --panel: #1F2937;
+    --border: #374151;
+
+    --text: #F9FAFB;
+    --text-secondary: #9CA3AF;
+
+}
+
+/* =======================================
+   RESET
+======================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #182338 0%,
+            #0B1220 60%
+        );
+
+    color: var(--text);
+
+    font-family: Inter, sans-serif;
+
+    overflow-x: hidden;
+}
+
+/* =======================================
+   APP
+======================================= */
+
+#app {
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+}
+
+/* =======================================
+   SCREENS
+======================================= */
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* =======================================
+   BACKGROUND FX
+======================================= */
+
+.background-glow {
+
+    position: fixed;
+
+    top: -300px;
+    left: 50%;
+
+    width: 800px;
+    height: 800px;
+
+    transform: translateX(-50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(0,224,138,0.12),
+        transparent 70%
+    );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+/* =======================================
+   TITLES
+======================================= */
+
+.vault-title {
+
+    font-family: Orbitron, sans-serif;
+
+    font-size: 4rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+
+    color: var(--text-secondary);
+
+    margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+
+    font-family: Orbitron, sans-serif;
+
+    margin-bottom: 12px;
+}
+
+/* =======================================
+   CARDS
+======================================= */
+
+.card {
+
+    background: rgba(31,41,55,0.92);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    margin-bottom: 24px;
+
+    backdrop-filter: blur(4px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.3);
+		
+}
+
+.hero-card {
+
+    background: rgba(31,41,55,.92);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    margin-bottom: 24px;
+
+    text-align: center;
+}
+
+/* =======================================
+   PROGRESS
+======================================= */
+
+.progress-card {
+
+    margin: 20px 0;
+}
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+
+    height: 12px;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    background: #0B1220;
+
+    border: 1px solid var(--border);
+}
+
+.progress-fill {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: linear-gradient(
+        90deg,
+        #00E08A,
+        #2dfab0
+    );
+
+    transition: width .4s ease;
+}
+
+.victory-fill {
+    width: 100%;
+}
+
+/* =======================================
+   BUTTONS
+======================================= */
+
+.primary-btn {
+
+    background: var(--vault-green);
+
+    color: #000;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 14px 28px;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(0,224,138,.5);
+}
+
+/* =======================================
+   ANSWERS
+======================================= */
+
+.answer-btn {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    background: #111827;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.answer-btn:hover {
+
+    border-color: var(--vault-green);
+
+    background: rgba(0,224,138,.1);
+}
+
+/* =======================================
+   RECENT FILE
+======================================= */
+
+.file-box {
+
+    background: #111827;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-top: 15px;
+}
+
+.file-label {
+
+    color: var(--vault-green);
+
+    font-family: "JetBrains Mono", monospace;
+
+    margin-bottom: 6px;
+}
+
+.file-name {
+
+    font-weight: 600;
+}
+
+/* =======================================
+   CUBI
+======================================= */
+
+.cubi-panel {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 20px;
+
+    background: #111827;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 18px;
+}
+
+.cubi-face {
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 12px;
+
+    background: var(--vault-green);
+
+    color: black;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+.cubi-text {
+
+    flex: 1;
+
+    color: var(--text-secondary);
+}
+
+/* =======================================
+   CHALLENGES
+======================================= */
+
+.challenge-card {
+
+    min-height: 350px;
+}
+
+.challenge-card p {
+
+    margin-bottom: 15px;
+
+    line-height: 1.6;
+}
+
+/* =======================================
+   READING BOX
+======================================= */
+
+.reading-box {
+
+    background: #111827;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+
+    line-height: 1.8;
+
+    color: var(--text-secondary);
+
+    white-space: pre-line;
+}
+
+/* =======================================
+   INPUT
+======================================= */
+
+input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 1rem;
+}
+
+input:focus {
+
+    outline: none;
+
+    border-color: var(--vault-green);
+}
+
+/* =======================================
+   VICTORY
+======================================= */
+
+.victory-card {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.success-title {
+
+    color: var(--vault-green);
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+}
+
+.success-code {
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 5rem;
+
+    color: var(--vault-green);
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 20px rgba(0,224,138,.4);
+}
+
+.success-text {
+
+    font-size: 1.3rem;
+
+    margin-bottom: 25px;
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media (max-width: 768px) {
+
+    #app {
+        padding: 20px;
+    }
+
+    .vault-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-card {
+        padding: 24px;
+    }
+
+    .success-code {
+        font-size: 3rem;
+    }
+
+    .cubi-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+/* =======================================
+   VAULT GRID STATES
+======================================= */
+
+.vault-door.available {
+    border-color: var(--vault-cyan);
+}
+
+.vault-door.completed {
+    border-color: var(--vault-green);
+
+    box-shadow:
+        0 0 12px rgba(0,224,138,.25);
+}
+
+.vault-door.locked {
+    opacity: .55;
+
+    cursor: not-allowed;
+}
+
+/* =======================================
+   FINAL LOCK
+======================================= */
+
+.access-denied {
+
+    color: var(--vault-red);
+
+    font-weight: 700;
+
+    text-align: center;
+
+    margin: 12px 0;
+}
+/* =======================================
+   VAULT GRID LAYOUT
+======================================= */
+
+#vault-grid {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+}
+
+.vault-door {
+
+    width: 140px;
+
+    min-height: 42px;
+
+	padding: 6px 10px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+}
+#exit-progress {
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+#exit-distance {
+    margin-top: 4px;
+    opacity: 0.9;
+}
+.route-line {
+
+    width: 3px;
+
+    height: 25px;
+
+    background: #00ff88;
+
+    opacity: 0.6;
+
+    margin: 10px 0;
+}
+.exit-gate {
+
+    width: 180px;
+
+    padding: 12px;
+
+    margin-top: 20px;
+
+    border: 3px solid #ffcc00;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    background: rgba(0,0,0,0.6);
+
+    backdrop-filter: blur(4px);
+}
+
+body {
+
+    min-height: 100vh;
+
+    background-image:
+        url("images/backrooms.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    color: var(--text);
+
+    font-family: Inter, sans-serif;
+
+    overflow-x: hidden;
+}
+#vault-grid {
+
+    width: fit-content;
+
+    margin: 0 auto;
+}
+#vault-screen .card:first-child {
+
+    padding: 16px;
+
+    max-width: 600px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+#vault-screen .card {
+
+    background: rgba(10,15,25,0.65);
+
+    backdrop-filter: blur(6px);
+}
+#vault-screen .card {
+    background: rgba(10,15,25,0.65);
+}
+#audio-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    font-size: 20px;
+}

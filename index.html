@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>THE VAULT</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="audio-toggle">🔊</button>
+
+    <!-- Ambient background -->
+    <div class="background-glow"></div>
+
+    <main id="app">
+
+        <!-- ================================= -->
+        <!-- HOME SCREEN -->
+        <!-- ================================= -->
+
+        <section
+            id="home-screen"
+            class="screen active"
+        >
+
+            <div class="hero-card">
+
+                <h1 class="vault-title">
+                    THE BACKROOMS
+                </h1>
+
+                <p class="subtitle">
+                    Investigate. Solve. Unlock.
+                </p>
+
+                <button
+                    id="enter-vault-btn"
+                    class="primary-btn"
+                >
+                    ENTER THE BACKROOMS
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================================= -->
+        <!-- VAULT GRID SCREEN -->
+        <!-- ================================= -->
+
+        <section
+            id="vault-screen"
+            class="screen"
+        >
+
+            <div class="card">
+
+  <h1 id="world-title">
+    ESCAPE THE BACKROOMS
+</h1>
+
+<h2 id="world-subtitle">
+    REACH THE EXIT GATE
+</h2>
+
+<p id="exit-progress">
+    0 / 30 LEVELS CLEARED
+</p>
+
+<p id="exit-distance">
+    EXIT GATE: 30 LEVELS AWAY
+</p>
+
+                <div class="progress-card">
+
+                    <div class="progress-header">
+
+                        <span>
+                            Progress
+                        </span>
+
+                        <span id="vault-progress-text">
+                            0 / 30 Doors
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            id="vault-progress-fill"
+                            class="progress-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                id="vault-grid"
+                class="card"
+            >
+
+                <!--
+                Generated dynamically by JS
+                -->
+
+            </div>
+
+        </section>
+
+        <!-- ================================= -->
+        <!-- DOOR SCREEN -->
+        <!-- ================================= -->
+
+        <section
+            id="door-screen"
+            class="screen"
+        >
+
+            <div class="card mission-card">
+
+                <div class="door-header">
+
+                    <h1 id="door-number">
+                        DOOR
+                    </h1>
+
+                    <h2 id="door-name">
+                        NAME
+                    </h2>
+
+                </div>
+
+                <div class="cubi-panel">
+
+                    <div class="cubi-face">
+                        ◼
+                    </div>
+
+                    <div
+                        id="door-briefing"
+                        class="cubi-text"
+                    >
+                        Mission briefing...
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                id="challenge-container"
+                class="card challenge-card"
+            >
+            </div>
+
+        </section>
+
+        <!-- ================================= -->
+        <!-- VICTORY SCREEN -->
+        <!-- ================================= -->
+
+        <section
+            id="victory-screen"
+            class="screen"
+        >
+
+            <div class="card victory-card">
+
+                <h1 class="success-title">
+                    ACCESS GRANTED
+                </h1>
+
+                <div
+                    id="victory-code"
+                    class="success-code"
+                >
+                    000
+                </div>
+
+                <p
+                    id="victory-text"
+                    class="success-text"
+                >
+                    Door Cleared
+                </p>
+
+                <button
+                    id="return-vault-btn"
+                    class="primary-btn"
+                >
+                    RETURN TO VAULT
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Door Data -->
+<script src="doors/door01.js"></script>
+<script src="doors/door02.js"></script>
+<script src="doors/door03.js"></script>
+<script src="doors/door04.js"></script>
+<script src="doors/door05.js"></script>
+
+
+<script src="doors.js"></script>
+
+    <!-- Game Engine -->
+ <script src="app.js"></script>
+
+</body>
+</html>
