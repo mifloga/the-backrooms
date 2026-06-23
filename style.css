@@ -690,3 +690,17 @@ body {
 
     font-size: 20px;
 }
+.exit-gate:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+.exit-gate:not(:disabled) {
+
+    border-color: #00ff88;
+
+    box-shadow:
+        0 0 20px rgba(0,255,136,0.5);
+}
