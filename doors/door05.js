@@ -154,15 +154,15 @@ At the end of the visit, one family member found a hidden route, another solved 
                 correct: 0
             },
 
-            {
-                q: "Who would most likely explain the rules clearly?",
-                answers: [
-                    "Eva",
-                    "Liam",
-                    "Liam's mother"
-                ],
-                correct: 2
-            },
+           {
+    q: "Who seems most careful before starting a new activity?",
+    answers: [
+        "Liam's mother",
+        "Eva",
+        "Liam"
+    ],
+    correct: 0
+},
 
             {
                 q: "What can we conclude about Liam's father?",
