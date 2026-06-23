@@ -191,6 +191,10 @@ if (remaining === 0) {
         "vault-progress-fill"
     ).style.width =
         `${(completed / totalDoors) * 100}%`;
+		document.getElementById(
+    "vault-progress-text"
+).textContent =
+    `${completed} / ${totalDoors} Doors`;
 
     grid.innerHTML = "";
 
