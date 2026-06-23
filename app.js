@@ -98,6 +98,15 @@ document
         "click",
         toggleAudio
     );
+	document
+    .getElementById("play-again-btn")
+    .addEventListener(
+        "click",
+        () => {
+            renderVaultGrid();
+            showScreen("vault-screen");
+        }
+    );
 }
 
 /* =========================
@@ -233,18 +242,30 @@ button.innerHTML =
     grid.appendChild(line);
 }
     });
-	const exitGate =
-    document.createElement("div");
+const exitGate =
+    document.createElement("button");
 
 exitGate.className =
-    "exit-gate";
+    "answer-btn exit-gate";
 
 exitGate.innerHTML =
 `
 🚨 EXIT GATE
 <br>
-FINAL LEVEL
+FINAL EXIT
 `;
+
+if (completed === totalDoors) {
+
+    exitGate.addEventListener(
+        "click",
+        showEndingScreen
+    );
+
+} else {
+
+    exitGate.disabled = true;
+}
 
 grid.appendChild(exitGate);
 }
@@ -922,6 +943,12 @@ function toggleAudio() {
         AudioManager.background.pause();
 
     }
+}
+function showEndingScreen() {
+
+    showScreen(
+        "ending-screen"
+    );
 }
 /* =========================
    HELPERS
