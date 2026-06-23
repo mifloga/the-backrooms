@@ -2,7 +2,7 @@ const door01 = {
 
     number: 1,
 
-    name: "ACCESS TERMINAL",
+    name: "LEVEL 01",
 
     briefing:
         "Acabas de entrar. La salida está bloqueada. Completa el nivel para avanzar.",
